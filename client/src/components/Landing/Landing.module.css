@@ -1,0 +1,56 @@
+.landing {
+    display: flex;
+    margin: 0em;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e6e6e6;
+    background-image: url("https://www.gifsanimados.org/data/media/619/nieve-imagen-animada-0079.gif");
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+}
+
+.landing img {
+    width: 30vw;
+    height: 60vh;
+}
+
+.container {
+    padding-left: 10vw;
+}
+
+.container h1 {
+    text-align: left;
+    color: #000;
+    font-family: 'Nunito';
+    font-size: 38px;
+    font-style: normal;
+    line-height: normal;
+    font-weight: bold;
+}
+
+.container p {
+    color: #000;
+    text-align: justify;
+    font-family: 'Roboto';
+    font-size: 25px;
+    font-style: normal;
+    line-height: normal;
+}
+
+.container button {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    justify-content: center;
+    cursor: pointer;
+    width: 250px;
+    height: 60px;
+    border-radius: 40px;
+    background: #cf9593;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+}

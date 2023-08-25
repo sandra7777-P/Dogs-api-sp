@@ -1,0 +1,21 @@
+.paginator {
+    display: flex;
+    background-color: rgb(106, 161, 220) ;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px rgba(77, 92, 175, 0.699) solid;
+    border-radius: 3px;
+    margin: 10px;
+    height: 40px;
+    font-family: 'Roboto';
+}
+
+.paginator button {
+    background-color: rgb(197, 232, 238);
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 15px;
+}

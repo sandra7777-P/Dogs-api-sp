@@ -1,0 +1,13 @@
+export const GET_DOGS = "GET_DOGS"
+export const SET_PAGE = "SET_PAGE"
+export const SET_TOTAL_PAGE = "SET_TOTAL_PAGE"
+export const SEARCH_DOGS = "SEARCH_DOGS"
+export const SET_LOADING = "SET_LOADING"
+export const GET_TEMPERAMENTS = "GET_TEMPERAMENTS"
+export const CREATE_DOG = "CREATE_DOG"
+export const FILTER_BY_TEMPERAMENT = 'FILTER_BY_TEMPERAMENT'
+export const FILTER_BY_ORIGIN = "FILTER_BY_ORIGIN"
+export const SORT_ORDER = 'SORT_ORDER'
+export const UPDATE_ORDER = 'UPDATE_ORDER'
+export const SET_CLEAN = 'SET_CLEAN'
+export const CLEAN_FILTER = 'CLEAN_FILTER'
