@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-image: url("https://www.gifsanimados.org/data/media/619/nieve-imagen-animada-0079.gif");
 }
 
 .App-logo {
@@ -21,7 +22,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #b1d4ec;
 }
 
 .App-link {

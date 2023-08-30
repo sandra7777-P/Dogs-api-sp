@@ -23,6 +23,7 @@ export default function Form() {
         weightMin: '',
         weightMax: '',
         lifeSpan: '',
+        Dueño: '',
         temperaments: []
     });
    
@@ -87,6 +88,7 @@ export default function Form() {
                 weightMin: '',
                 weightMax: '',
                 lifeSpan: '',
+                Dueño: '',
                 temperaments: []
             });
             const validationErrors = validate(formData);
@@ -99,6 +101,7 @@ export default function Form() {
                 height: `${formData.heightMin} - ${formData.heightMax}`,
                 weight: `${formData.weightMin} - ${formData.weightMax}`,
                 life_span: `${formData.lifeSpan} years`,
+                Dueño: formData.Dueño,
                 temperaments: formData.temperaments,
             }
             console.log(payload)
@@ -155,6 +158,11 @@ export default function Form() {
                         type="number" key="lifeSpan" name="lifeSpan" onChange={handleChange}
                         value={formData.lifeSpan} /></label>
                     <span>{errors?.lifeSpan && errors.lifeSpan}</span>
+                    <br />
+                    <label>Dueño: <input
+                    type="text" key="Dueño" name="Dueño" value={formData.Dueño}
+                    onChange={handleChange} /> </label>
+                <span>{errors?.Dueño && errors.Dueño}</span>
                     <br />
                     <label>
                         Temperaments:

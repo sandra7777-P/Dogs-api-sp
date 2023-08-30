@@ -31,6 +31,11 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    Dueño: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true
+    },
     created: {
       type: DataTypes.BOOLEAN,
       defaultValue: true

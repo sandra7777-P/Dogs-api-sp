@@ -2,7 +2,7 @@
 
 .card {
     width: 280px;
-    height: 410px;
+    height: 510px;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -11,6 +11,31 @@
     margin-bottom: 12px;
     background-color: rgba(171, 218, 225);
 }
+.card {
+    /* Estilos normales de la tarjeta */
+    width: 280px;
+    height: 340px;
+    background-color: rgb(86, 164, 216);
+    transition: box-shadow 0.3s; /* Agregar transición suave al efecto */
+  
+    /* Otros estilos como margen, padding, etc. */
+  }
+  .card:hover {
+    transform: scale(1.1) rotate(5deg); /* Efecto de escala y rotación al destacar */
+  }
+  
+  .card.clicked {
+    animation: bounce 0.5s ease-in-out; /* Animación al hacer clic */
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
 
 /* Estilos para la imagen del perro */
 .card img {

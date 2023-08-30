@@ -4,13 +4,14 @@ const { Temperament, Dog } = require('../db');
 // Función para crear perros en la base de datos
 const createDog = async (req, res) => {
     try {
-        const { image, name, height, weight, life_span, temperaments } = req.body 
+        const { image, name, height, weight, life_span, Dueño, temperaments } = req.body 
         // Validación de los campos requeridos en el body
         if (!image ||
             !name ||
             !height ||
             !weight ||
             !life_span ||
+            !Dueño ||
             !temperaments) 
             return res.status(404).json({ error: "Incomplete data" });
 
@@ -35,7 +36,8 @@ const createDog = async (req, res) => {
                 name,
                 height,
                 weight,
-                life_span
+                life_span,
+                Dueño,
             }
         );
 
