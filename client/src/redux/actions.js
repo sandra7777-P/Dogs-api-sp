@@ -19,7 +19,8 @@ const URL = "https://api.thedogapi.com/v1/breeds"
 export function allDogs() {
     return async function (dispatch) {
         try {
-            const service = await axios(URL);
+            const service = await axios("http://localhost:3001/Dogs")
+            //const service = await axios(URL);
             const allDogsData = service.data;
 
             console.log(allDogsData); // Verifica los datos obtenidos
@@ -86,7 +87,7 @@ export function allTemperaments() {
         try {
             dispatch(setLoading(true))
 
-            const serviceTemp = await axios("http://localhost:3001/temperaments")
+            const serviceTemp = await axios("http://localhost:3001/Temperaments")
             const allTempData = serviceTemp.data
 
             dispatch({

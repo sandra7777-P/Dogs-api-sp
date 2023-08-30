@@ -26,7 +26,7 @@ const getTemperaments = async (req, res) => {
         const totalTemp = await Temperament.findAll();
         const sortTemp = totalTemp.sort((a, b) => a.name.localeCompare(b.name));
 
-        res.status(200).json(sortTemp);
+        res.status(200).json(uniqueTemperaments);
     } catch (error) {
         return res.status(500).json({ error: error.message });
     }

@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const routes = require('./routes/index.js');
 const app = express();
 
-require('./db');
+require('./db.js');
 
 const server = express();
 

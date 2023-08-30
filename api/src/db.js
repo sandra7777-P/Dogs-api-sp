@@ -1,4 +1,6 @@
+//Esta línea de código se utiliza para cargar variables de entorno desde un archivo .env en la raíz de tu proyecto. 
 require('dotenv').config();
+
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');

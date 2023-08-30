@@ -13,11 +13,12 @@ function Cards({ currentPage, dogsPerPage }) {
     const startIndex = (currentPage - 1) * dogsPerPage;
     const endIndex = startIndex + dogsPerPage;
     const dogsToShow = dogsArray.slice(startIndex, endIndex);
+    console.log(dogsToShow);
 
     return (
         <div className={style.cards}>
-            {dogsToShow.length > 0 ? (
-                dogsToShow.map((dog) => (
+            {dogsArray.length > 0 ? (
+                dogsArray.map((dog) => (
                     <Card key={dog.id} dog={dog} />
                 ))
             ) : (
