@@ -11,7 +11,7 @@ import Paginator from '../Paginator/Paginator';
 // Hace la petición al estado global 
 export default function Home() {
     const dispatch = useDispatch();
-    const dogs = useSelector((state) => state.allDogs);
+    const dogs = useSelector((state) => state.filteredData);
 
     //Escucha los cambios y los despacha
     useEffect(() => {

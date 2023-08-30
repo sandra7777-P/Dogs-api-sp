@@ -25,11 +25,11 @@ export default function Form() {
         lifeSpan: '',
         temperaments: []
     });
-    console.log(formData)
+   
 
     // Estado local para almacenar los errores de validación del formulario.
     const [errors, setErrors] = useState({});
-    console.log(errors)
+   
 
     // Estado local para decidir si hay interacción con el formulario.
     const [formTouched, setFormTouched] = useState(false);

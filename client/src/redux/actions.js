@@ -13,17 +13,14 @@ import { GET_DOGS,
     CLEAN_FILTER, 
     SET_CLEAN } from "./actionType";
 
-const URL = "https://api.thedogapi.com/v1/breeds"
+    const URL = "http://localhost:3001/dogs"
 
 // Acción para consultar todos los perros
 export function allDogs() {
     return async function (dispatch) {
         try {
-            const service = await axios("http://localhost:3001/Dogs")
-            //const service = await axios(URL);
+            const service = await axios(URL);
             const allDogsData = service.data;
-
-            console.log(allDogsData); // Verifica los datos obtenidos
 
             dispatch({
                 type: GET_DOGS,
@@ -32,7 +29,7 @@ export function allDogs() {
 
             dispatch(setTotalPage());
         } catch (error) {
-            alert('Error Fetching dogs:', error);;
+            alert('Error Fetching dogs:', error);
         }
     };
 }
@@ -87,7 +84,7 @@ export function allTemperaments() {
         try {
             dispatch(setLoading(true))
 
-            const serviceTemp = await axios("http://localhost:3001/Temperaments")
+            const serviceTemp = await axios("http://localhost:3001/temperaments")
             const allTempData = serviceTemp.data
 
             dispatch({

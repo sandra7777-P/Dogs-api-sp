@@ -4,13 +4,13 @@ const { Router } = require('express');
 const getOneDog = require('../controllers/oneDog')
 const getTemperaments = require('../controllers/temperaments');
 const createDog = require('../controllers/newDog');
-const { getAllDogs } = require('../controllers/searchDogs');
+const { getDogs } = require('../controllers/searchDogs');
 
 const router = Router();
 
 // Configurar los routers
 // Ejemplo: router.use('/auth', authRouter);
-router.get('/dogs', getAllDogs)
+router.get('/dogs', getDogs)
 router.get('/dogs/:id', getOneDog)
 router.get('/temperaments', getTemperaments)
 

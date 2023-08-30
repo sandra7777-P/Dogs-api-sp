@@ -8,6 +8,7 @@ export default function Temperament() {
     const temperaments = useSelector((state) => state.allTemperaments); // Se susbcribe al estado global
     const isLoading = useSelector((state) => state.isLoading)
     const clean = useSelector((state) => state.isClean);
+   
 
     const dispatch = useDispatch();
     const [selectedTemperament, setSelectedTemperament] = useState("all"); // Se define el estado local
@@ -31,8 +32,8 @@ export default function Temperament() {
             <select value={selectedTemperament}
                 onChange={handleOptionSelect}>
                 <option value="all">All</option>
-                {temperaments.map((temperament) => (
-                    <option key={temperament.name} value={temperament.name}>
+                {temperaments.map((temperament, index) => (
+                    <option key={`${temperament.name}-${index}`} value={temperament.name}>
                         {temperament.name}
                     </option>
                 ))}

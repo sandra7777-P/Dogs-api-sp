@@ -2,25 +2,23 @@ const dogsApi = require("./dogsApi");
 const dogsDB = require("./dogsDB");
 
 // Función para combinar o unir datos de la api externa y de la base de datos
-const getAllDogs = async (req, res) => {
+const getAllDogs = async () => {
     try {
         // Código para obtener datos desde Api
         const dogsFromApi = await dogsApi();
-
-        console.log("dogsFromApi: ", dogsFromApi);
 
         // Código para obtener datos desde DB
         const dogsFromDB = await dogsDB();
 
         // Combinar los resultados de Api y DB
-        const allDogs = [...dogsFromApi];
+        const allDogs = [...dogsFromApi, ...dogsFromDB];
 
         // Ordenar alfabéticamente
         allDogs.sort((a, b) => a.name.localeCompare(b.name));
 
-        res.status(200).json(allDogs);
+        return allDogs;
     } catch (error) {
-        return res.status(500).json({ error: error.message });
+        return {error}
     }
 }
 

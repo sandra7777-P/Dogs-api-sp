@@ -9,12 +9,12 @@ export default function CardDetail() {
     const [dog, setDog] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
-    console.log(dog)
+    
 
     useEffect(() => {
         const getDog = async (id) => {
             try {
-                const response = await axios.get("https://api.thedogapi.com/v1/breeds");
+                const response = await axios.get(`http://localhost:3001/dogs/${id}`);
                 const data = response.data
                 if (data) {
                     setDog(data);
